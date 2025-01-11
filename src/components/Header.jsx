@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import About from "./About"
 
 import bookstore from "../Asset/bookstore-logo.avif";
 // import Login from "./Login";
@@ -10,7 +11,7 @@ const Header = () => {
     
     <header className="bg-[#000000]/80 text-white py-3 shadow-lg">
       <div className="container mx-auto px-4">
-        <nav className="flex items-center justify-between  navbar-dark">
+        <nav className="flex flex-col md:flex-row items-center justify-between navbar-dark">
           {/* <div className="container-fluid flex items-center justify-between gap-20"> */}
             <div className="navbar-brand">
               <Link className=" text-xl font-bold cursor-pointer">
@@ -49,7 +50,7 @@ const Header = () => {
               </ul>
               <br />
               <div>
-                <form className="flex items-center gap-2 " role="search">
+                <form className="hidden md:flex items-center gap-2" role="search">
                   <input
                     className="form-control px-3 py-1 rounded-md border border-gray-300"
                     type="search"
@@ -71,8 +72,7 @@ const Header = () => {
           {/* </div> */}
         </nav>
       </div>
-    </header>
-    
+    </header> 
   );
 };
 

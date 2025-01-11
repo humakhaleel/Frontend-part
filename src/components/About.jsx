@@ -1,18 +1,20 @@
 import React from "react";
-// import Header from "./Header";
-// import Footer from "./Footer";
+import Header from "./Header";
+import Footer from "./Footer";
+import banner from "../Asset/banner.jpg";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="max-w-screen-2xl container mx-auto md:px-20 px-4 flex flex-col md:flex-row my-10  ">
         <div className=" order-2 md:order-1 w-full md:w-1/2 mt-12 md:mt-32">
           <div className="space-y-8">
-            <h1 className="text-5xl font-bold font-mono underline">
+            <h1 className="text-5xl font-bold font-mono ">
               WELCOME TO OUR
               <br />
-              <span className="text-teal-300 font-serif underline">
+              <span className="text-teal-300 font-serif ">
                 BOOKSTORE
               </span>
             </h1>
@@ -29,20 +31,20 @@ const About = () => {
             </p>
           </div>
           <button className="btn mt-6 btn-outline font-bold btn-success bg-white">
-            <a
+            <Link
               href="#"
               target="_blank"
-              className="text-decoration-none text-black "
+              className="mt-6 bg-pink-500 text-white px-4 py-2 rounded-md hover:bg-pink-700 duration-300"
             >
               Learn More
-            </a>
+            </Link>
           </button>
         </div>
-        {/* <div className=" order-1 w-full md:w-1/2 mt-32">
-          <img src={banner} alt="" className="w-92 h-81" />
-        </div> */}
+        <div className="order-2 w-full mt-20 md:w-1/2 bg-transparent">
+          <img src={banner} className="md:w-[550px] md:h-[500px] md:ml-12 rounded-full" alt=""/>
+        </div> 
       </div>
-      {/* <Footer /> */}
+       <Footer /> 
     </>
   );
 };
