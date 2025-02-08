@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-function Card({}) {
-  
+function Card({item}) {
+    // console.log(item)
   
     // const fetchBooks = async () => {
     //   try {
@@ -21,9 +21,9 @@ function Card({}) {
   // }
 
  
-const handleSelectedproducts = (productsdetails)=>{
-setSelectProducts(productsdetails);
-}
+// const handleSelectedproducts = (productsdetails)=>{
+// setSelectProducts(productsdetails);
+// }
   return (
     <>
       {/* <div>
@@ -35,15 +35,20 @@ setSelectProducts(productsdetails);
   );
 } */}
 
-      <div className="mt-4 my-3 p-3">
+      <div className="mt-4 my-3 p-3">/
+        <h1>{item.title}</h1>
+      <img src={item.images} alt="" />
+        <p>Price: {item.price}</p>
+        <p>Rating: {item.rating}</p>
+
         <div className="card w-92 bg-base-100 shadow-xl hover:scale-105 duration-200 dark:bg-slate-900 dark:text-white dark:border">
-          <figure width="75px">
+          {/* <figure width="75px">
             <img
               src="https://img.freepik.com/free-vector/books-stack-realistic_1284-4735.jpg?size=626&ext=jpg&ga=GA1.1.968925204.1707545913&semt=sphhttps://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
               alt="book-img"
             />
-          </figure>
-          <div>
+          </figure> */}
+          {/* <div>
             {products.map((item) => (
               <div className="card-body">
                 <h2 className="card-title">
@@ -60,7 +65,7 @@ setSelectProducts(productsdetails);
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
           {/* <div className="card-body">
             <h2 className="card-title">
                {item.title}

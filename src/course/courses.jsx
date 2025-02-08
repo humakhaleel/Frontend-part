@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header"
-import Course from "../components/Course";
+import Course from "../components/course";
 import Footer from "../components/Footer";
 function Courses() {
   return (
